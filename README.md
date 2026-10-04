@@ -5,6 +5,16 @@
 
 ---
 
+## 📸 Application Screenshots & Live Interface
+
+### 1. OmniDiscovery-Lab Interactive Control Center & Specialist Agent Handoffs
+![OmniDiscovery-Lab Interface](Image/OmniDiscovery-Lab-10x-Scientific-Discovery-10-04-2026_09_41_AM.png)
+
+### 2. Quantitative Bottleneck Reduction & 10× Acceleration Analytics
+![10x Acceleration Analytics](Image/OmniDiscovery-Lab-10x-Scientific-Discovery-10-04-2026_09_43_AM.png)
+
+---
+
 ## 🏆 Moonshot & Overview
 
 **OmniDiscovery-Lab** is an open-source, multi-agent AI lab designed to accelerate scientific discovery for **Nobel Prize-caliber breakthroughs** by **10×**. Focused on oncology, the lab targets the **KRAS G12D** oncogenic mutation—a historically "undruggable" driver mutation responsible for over 90% of pancreatic ductal adenocarcinomas and 45% of colorectal cancers.
@@ -64,6 +74,9 @@ Agentic-Scientific-Discovery-/
 ├── app.py                      # Interactive Streamlit Web Application & Visual Lab
 ├── omnigent_config.yaml        # Omnigent Meta-Harness configuration & governance policies
 ├── requirements.txt            # Python dependencies
+├── Image/                      # Application UI Screenshots
+│   ├── OmniDiscovery-Lab-10x-Scientific-Discovery-10-04-2026_09_41_AM.png
+│   └── OmniDiscovery-Lab-10x-Scientific-Discovery-10-04-2026_09_43_AM.png
 ├── omnigent_harness/
 │   ├── meta_harness.py         # Core Omnigent orchestrator & state tracer
 │   ├── safety_policies.py      # Governance policies & biosecurity evaluation engine

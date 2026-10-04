@@ -1,0 +1,68 @@
+# Omnigent Meta-Harness Configuration File
+# Challenge: 7th Global AI Hackathon - Agentic Scientific Discovery
+# Target Platform: Databricks / Open-Source Omnigent Framework
+
+version: "1.0.0"
+harness:
+  name: "OmniDiscovery-Lab"
+  description: "Agentic AI Lab for KRAS G12D Oncogenic Mutation Breakthroughs"
+  sandbox_type: "databricks_managed_or_disposable"
+  max_parallel_agents: 5
+  spend_cap_usd: 50.00
+  timeout_seconds: 3600
+
+governance:
+  human_in_the_loop: true
+  require_approval_for:
+    - "wet_lab_proposal"
+    - "high_toxicity_molecule_synthesis"
+    - "spend_limit_exceeded"
+  safety_policy: "strict_biosecurity_and_toxicity"
+
+agents:
+  - id: "lit_retrieval_agent"
+    name: "Literature & Knowledge Agent"
+    role: "gathers clinical publications, crystal structures, and benchmark drug data"
+    model: "claude-3-5-sonnet"
+    tools:
+      - "europe_pmc_api"
+      - "pubchem_api"
+      - "uniprot_api"
+      - "openalex_api"
+
+  - id: "hypothesis_formulator_agent"
+    name: "Hypothesis Formulator Agent"
+    role: "generates structural binding hypotheses and candidate SMILES scaffolds"
+    model: "gpt-4o"
+    tools:
+      - "bioisostere_generator"
+      - "protac_linker_designer"
+      - "pharmacophore_mapper"
+
+  - id: "computational_experiment_agent"
+    name: "Computational Experiment Agent"
+    role: "runs affinity docking simulations, ADMET predictions, and selectivity screens"
+    model: "claude-3-5-sonnet"
+    tools:
+      - "docking_affinity_simulator"
+      - "admet_property_calculator"
+      - "salt_bridge_analyzer"
+      - "kras_selectivity_screen"
+
+  - id: "analysis_decision_agent"
+    name: "Analysis & Decision Agent"
+    role: "interprets experimental evidence, updates Pareto frontier, and plans next test"
+    model: "gpt-4o"
+    tools:
+      - "bayesian_learning_calculator"
+      - "pareto_frontier_optimizer"
+      - "next_experiment_selector"
+
+  - id: "safety_approval_agent"
+    name: "Safety & Human Approval Agent"
+    role: "evaluates biosecurity risks, off-target toxicity, and manages human gates"
+    model: "claude-3-5-sonnet"
+    tools:
+      - "toxicity_qsar_evaluator"
+      - "synthetic_accessibility_scorer"
+      - "human_gate_notifier"
